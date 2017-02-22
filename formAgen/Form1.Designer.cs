@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            MetroSuite.MetroTextBox.MainColorScheme mainColorScheme1 = new MetroSuite.MetroTextBox.MainColorScheme();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1 = new ns1.BunifuGradientPanel();
             this.bunifuImageButton2 = new ns1.BunifuImageButton();
@@ -41,6 +42,7 @@
             this.bunifuImageButton1 = new ns1.BunifuImageButton();
             this.txt_fecha = new ns1.BunifuMaterialTextbox();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            this.metroTextBox1 = new MetroSuite.MetroTextBox();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -197,6 +199,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
+            this.panel2.Controls.Add(this.metroTextBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Controls.Add(this.txt_fecha);
@@ -260,6 +263,27 @@
             this.bunifuElipse1.ElipseRadius = 10;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // metroTextBox1
+            // 
+            this.metroTextBox1.BanChars = false;
+            mainColorScheme1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
+            mainColorScheme1.BorderColorNormal = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            mainColorScheme1.MainColor = System.Drawing.Color.White;
+            this.metroTextBox1.ColorScheme = mainColorScheme1;
+            this.metroTextBox1.DefaultText = null;
+            this.metroTextBox1.DefaultTextColor = System.Drawing.Color.LightGray;
+            this.metroTextBox1.DefaultTextNormalForeColor = System.Drawing.SystemColors.ControlText;
+            this.metroTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.metroTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.metroTextBox1.IllegalChars = ((System.Collections.Generic.List<char>)(resources.GetObject("metroTextBox1.IllegalChars")));
+            this.metroTextBox1.Location = new System.Drawing.Point(10, 137);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(162, 23);
+            this.metroTextBox1.TabIndex = 3;
+            this.metroTextBox1.Text = "metroTextBox1";
+            this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.metroTextBox1.UseDefaultText = false;
+            // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -296,6 +320,7 @@
         private System.Windows.Forms.Label label1;
         private ns1.BunifuElipse bunifuElipse1;
         private ns1.BunifuImageButton bunifuImageButton2;
+        private MetroSuite.MetroTextBox metroTextBox1;
     }
 }
 
