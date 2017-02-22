@@ -30,7 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            MetroSuite.MetroTextBox.MainColorScheme mainColorScheme1 = new MetroSuite.MetroTextBox.MainColorScheme();
+            MetroSuite.MetroTextBox.MainColorScheme mainColorScheme2 = new MetroSuite.MetroTextBox.MainColorScheme();
+            MetroSuite.MetroButton.MainColorScheme mainColorScheme1 = new MetroSuite.MetroButton.MainColorScheme();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1 = new ns1.BunifuGradientPanel();
             this.bunifuImageButton2 = new ns1.BunifuImageButton();
@@ -38,11 +39,12 @@
             this.btn_reportes = new ns1.BunifuFlatButton();
             this.btn_alta = new ns1.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.metroTextBox1 = new MetroSuite.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new ns1.BunifuImageButton();
             this.txt_fecha = new ns1.BunifuMaterialTextbox();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
-            this.metroTextBox1 = new MetroSuite.MetroTextBox();
+            this.metroButton1 = new MetroSuite.MetroButton();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -199,6 +201,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
+            this.panel2.Controls.Add(this.metroButton1);
             this.panel2.Controls.Add(this.metroTextBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.bunifuImageButton1);
@@ -209,6 +212,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(586, 455);
             this.panel2.TabIndex = 1;
+            // 
+            // metroTextBox1
+            // 
+            this.metroTextBox1.BanChars = false;
+            mainColorScheme2.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
+            mainColorScheme2.BorderColorNormal = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            mainColorScheme2.MainColor = System.Drawing.Color.White;
+            this.metroTextBox1.ColorScheme = mainColorScheme2;
+            this.metroTextBox1.DefaultText = null;
+            this.metroTextBox1.DefaultTextColor = System.Drawing.Color.LightGray;
+            this.metroTextBox1.DefaultTextNormalForeColor = System.Drawing.SystemColors.ControlText;
+            this.metroTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.metroTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.metroTextBox1.IllegalChars = ((System.Collections.Generic.List<char>)(resources.GetObject("metroTextBox1.IllegalChars")));
+            this.metroTextBox1.Location = new System.Drawing.Point(10, 137);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(162, 23);
+            this.metroTextBox1.TabIndex = 3;
+            this.metroTextBox1.Text = "metroTextBox1";
+            this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.metroTextBox1.UseDefaultText = false;
             // 
             // label1
             // 
@@ -263,26 +287,22 @@
             this.bunifuElipse1.ElipseRadius = 10;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // metroTextBox1
+            // metroButton1
             // 
-            this.metroTextBox1.BanChars = false;
-            mainColorScheme1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
-            mainColorScheme1.BorderColorNormal = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            mainColorScheme1.MainColor = System.Drawing.Color.White;
-            this.metroTextBox1.ColorScheme = mainColorScheme1;
-            this.metroTextBox1.DefaultText = null;
-            this.metroTextBox1.DefaultTextColor = System.Drawing.Color.LightGray;
-            this.metroTextBox1.DefaultTextNormalForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.metroTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.metroTextBox1.IllegalChars = ((System.Collections.Generic.List<char>)(resources.GetObject("metroTextBox1.IllegalChars")));
-            this.metroTextBox1.Location = new System.Drawing.Point(10, 137);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(162, 23);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.Text = "metroTextBox1";
-            this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroTextBox1.UseDefaultText = false;
+            mainColorScheme1.AccentColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
+            mainColorScheme1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            mainColorScheme1.FillColor = System.Drawing.Color.White;
+            mainColorScheme1.HoverFillColor = System.Drawing.Color.White;
+            mainColorScheme1.PressAccentColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            mainColorScheme1.PressFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.metroButton1.ColorScheme = mainColorScheme1;
+            this.metroButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.metroButton1.ForeColor = System.Drawing.Color.Black;
+            this.metroButton1.Location = new System.Drawing.Point(160, 182);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(105, 27);
+            this.metroButton1.TabIndex = 4;
+            this.metroButton1.Text = "metroButton1";
             // 
             // Form1
             // 
@@ -321,6 +341,7 @@
         private ns1.BunifuElipse bunifuElipse1;
         private ns1.BunifuImageButton bunifuImageButton2;
         private MetroSuite.MetroTextBox metroTextBox1;
+        private MetroSuite.MetroButton metroButton1;
     }
 }
 

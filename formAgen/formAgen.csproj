@@ -33,10 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Visual Studio 2015\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="MetroSuite">
-      <HintPath>..\..\..\MetroSuite.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Visual Studio 2015\MetroSuite.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
