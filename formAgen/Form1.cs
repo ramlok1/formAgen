@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace formAgen
 {
     public partial class Form1 : Form
@@ -24,6 +25,8 @@ namespace formAgen
         public Form1()
         {
             InitializeComponent();
+            
+            
         }      
 
         
@@ -33,7 +36,35 @@ namespace formAgen
             Environment.Exit(0);
         }       
 
-        private void bunifuGradientPanel1_MouseDown(object sender, MouseEventArgs e)
+      
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+      
+
+        private void btn_alta_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+            panel3.Visible = false;
+            bunifuSeparator1.Visible = true;
+            bunifuSeparator2.Visible = false;
+            
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+            
+            panel3.Visible = true;
+            panel4.Visible = false;
+            bunifuSeparator1.Visible = false;
+            bunifuSeparator2.Visible = true;
+            
+        }
+
+        private void bunifuGradientPanel1_MouseDown_1(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -43,24 +74,6 @@ namespace formAgen
 
         }
 
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_alta_Click(object sender, EventArgs e)
-        {
-            panel2.Visible = false;
-        }
-
-        private void btn_reportes_Click(object sender, EventArgs e)
-        {
-            panel2.Visible = true;
-        }
+       
     }
 }
