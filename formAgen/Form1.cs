@@ -74,6 +74,11 @@ namespace formAgen
 
         }
 
-       
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'bD_localDataSet.Datos' Puede moverla o quitarla según sea necesario.
+            this.datosTableAdapter.Fill(this.bD_localDataSet.Datos);
+
+        }
     }
 }
