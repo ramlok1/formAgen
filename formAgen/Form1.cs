@@ -47,5 +47,20 @@ namespace formAgen
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_alta_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+        }
     }
 }

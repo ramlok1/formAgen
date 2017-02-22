@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            MetroSuite.MetroTextBox.MainColorScheme mainColorScheme2 = new MetroSuite.MetroTextBox.MainColorScheme();
-            MetroSuite.MetroButton.MainColorScheme mainColorScheme1 = new MetroSuite.MetroButton.MainColorScheme();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1 = new ns1.BunifuGradientPanel();
             this.bunifuImageButton2 = new ns1.BunifuImageButton();
@@ -39,17 +37,18 @@
             this.btn_reportes = new ns1.BunifuFlatButton();
             this.btn_alta = new ns1.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.metroTextBox1 = new MetroSuite.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuImageButton1 = new ns1.BunifuImageButton();
-            this.txt_fecha = new ns1.BunifuMaterialTextbox();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
-            this.metroButton1 = new MetroSuite.MetroButton();
+            this.bunifuDatepicker1 = new ns1.BunifuDatepicker();
+            this.txt_name = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -163,6 +162,7 @@
             this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_reportes.Textcolor = System.Drawing.Color.White;
             this.btn_reportes.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
             // btn_alta
             // 
@@ -197,42 +197,24 @@
             this.btn_alta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_alta.Textcolor = System.Drawing.Color.White;
             this.btn_alta.TextFont = new System.Drawing.Font("Century Gothic", 11F);
+            this.btn_alta.Click += new System.EventHandler(this.btn_alta_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightCyan;
-            this.panel2.Controls.Add(this.metroButton1);
-            this.panel2.Controls.Add(this.metroTextBox1);
+            this.panel2.BackColor = System.Drawing.Color.Snow;
+            this.panel2.Controls.Add(this.bunifuThinButton21);
+            this.panel2.Controls.Add(this.materialSingleLineTextField3);
+            this.panel2.Controls.Add(this.materialSingleLineTextField2);
+            this.panel2.Controls.Add(this.materialSingleLineTextField1);
+            this.panel2.Controls.Add(this.txt_name);
+            this.panel2.Controls.Add(this.bunifuDatepicker1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.bunifuImageButton1);
-            this.panel2.Controls.Add(this.txt_fecha);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(198, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(586, 455);
             this.panel2.TabIndex = 1;
-            // 
-            // metroTextBox1
-            // 
-            this.metroTextBox1.BanChars = false;
-            mainColorScheme2.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
-            mainColorScheme2.BorderColorNormal = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            mainColorScheme2.MainColor = System.Drawing.Color.White;
-            this.metroTextBox1.ColorScheme = mainColorScheme2;
-            this.metroTextBox1.DefaultText = null;
-            this.metroTextBox1.DefaultTextColor = System.Drawing.Color.LightGray;
-            this.metroTextBox1.DefaultTextNormalForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.metroTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.metroTextBox1.IllegalChars = ((System.Collections.Generic.List<char>)(resources.GetObject("metroTextBox1.IllegalChars")));
-            this.metroTextBox1.Location = new System.Drawing.Point(10, 137);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(162, 23);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.Text = "metroTextBox1";
-            this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroTextBox1.UseDefaultText = false;
             // 
             // label1
             // 
@@ -248,61 +230,125 @@
             this.label1.Text = "Formulario de Captura";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(109, 69);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(36, 30);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 1;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
-            // txt_fecha
-            // 
-            this.txt_fecha.BackColor = System.Drawing.Color.White;
-            this.txt_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txt_fecha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_fecha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_fecha.HintForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txt_fecha.HintText = "Fecha";
-            this.txt_fecha.isPassword = false;
-            this.txt_fecha.LineFocusedColor = System.Drawing.Color.Gray;
-            this.txt_fecha.LineIdleColor = System.Drawing.Color.SteelBlue;
-            this.txt_fecha.LineMouseHoverColor = System.Drawing.Color.SlateGray;
-            this.txt_fecha.LineThickness = 4;
-            this.txt_fecha.Location = new System.Drawing.Point(10, 69);
-            this.txt_fecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(100, 30);
-            this.txt_fecha.TabIndex = 0;
-            this.txt_fecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 10;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // metroButton1
+            // bunifuDatepicker1
             // 
-            mainColorScheme1.AccentColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
-            mainColorScheme1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            mainColorScheme1.FillColor = System.Drawing.Color.White;
-            mainColorScheme1.HoverFillColor = System.Drawing.Color.White;
-            mainColorScheme1.PressAccentColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            mainColorScheme1.PressFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.metroButton1.ColorScheme = mainColorScheme1;
-            this.metroButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.metroButton1.ForeColor = System.Drawing.Color.Black;
-            this.metroButton1.Location = new System.Drawing.Point(160, 182);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(105, 27);
-            this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "metroButton1";
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuDatepicker1.BorderRadius = 0;
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.Gray;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(12, 69);
+            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(0);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(159, 26);
+            this.bunifuDatepicker1.TabIndex = 4;
+            this.bunifuDatepicker1.Value = new System.DateTime(2017, 2, 22, 12, 22, 19, 144);
+            // 
+            // txt_name
+            // 
+            this.txt_name.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_name.Depth = 0;
+            this.txt_name.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txt_name.Hint = "Nombre";
+            this.txt_name.Location = new System.Drawing.Point(12, 118);
+            this.txt_name.MaxLength = 32767;
+            this.txt_name.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_name.Name = "txt_name";
+            this.txt_name.PasswordChar = '\0';
+            this.txt_name.SelectedText = "";
+            this.txt_name.SelectionLength = 0;
+            this.txt_name.SelectionStart = 0;
+            this.txt_name.Size = new System.Drawing.Size(368, 23);
+            this.txt_name.TabIndex = 5;
+            this.txt_name.TabStop = false;
+            this.txt_name.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField1
+            // 
+            this.materialSingleLineTextField1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.materialSingleLineTextField1.Depth = 0;
+            this.materialSingleLineTextField1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.materialSingleLineTextField1.Hint = "Text1";
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(12, 167);
+            this.materialSingleLineTextField1.MaxLength = 32767;
+            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+            this.materialSingleLineTextField1.PasswordChar = '\0';
+            this.materialSingleLineTextField1.SelectedText = "";
+            this.materialSingleLineTextField1.SelectionLength = 0;
+            this.materialSingleLineTextField1.SelectionStart = 0;
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(197, 23);
+            this.materialSingleLineTextField1.TabIndex = 6;
+            this.materialSingleLineTextField1.TabStop = false;
+            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField2
+            // 
+            this.materialSingleLineTextField2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.materialSingleLineTextField2.Depth = 0;
+            this.materialSingleLineTextField2.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.materialSingleLineTextField2.Hint = "Text2";
+            this.materialSingleLineTextField2.Location = new System.Drawing.Point(280, 167);
+            this.materialSingleLineTextField2.MaxLength = 32767;
+            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
+            this.materialSingleLineTextField2.PasswordChar = '\0';
+            this.materialSingleLineTextField2.SelectedText = "";
+            this.materialSingleLineTextField2.SelectionLength = 0;
+            this.materialSingleLineTextField2.SelectionStart = 0;
+            this.materialSingleLineTextField2.Size = new System.Drawing.Size(197, 23);
+            this.materialSingleLineTextField2.TabIndex = 7;
+            this.materialSingleLineTextField2.TabStop = false;
+            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField3
+            // 
+            this.materialSingleLineTextField3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.materialSingleLineTextField3.Depth = 0;
+            this.materialSingleLineTextField3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.materialSingleLineTextField3.Hint = "Text3";
+            this.materialSingleLineTextField3.Location = new System.Drawing.Point(12, 217);
+            this.materialSingleLineTextField3.MaxLength = 32767;
+            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
+            this.materialSingleLineTextField3.PasswordChar = '\0';
+            this.materialSingleLineTextField3.SelectedText = "";
+            this.materialSingleLineTextField3.SelectionLength = 0;
+            this.materialSingleLineTextField3.SelectionStart = 0;
+            this.materialSingleLineTextField3.Size = new System.Drawing.Size(269, 23);
+            this.materialSingleLineTextField3.TabIndex = 8;
+            this.materialSingleLineTextField3.TabStop = false;
+            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.Snow;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Grabar";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 2;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(400, 379);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(142, 44);
+            this.bunifuThinButton21.TabIndex = 9;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -323,7 +369,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -335,13 +380,15 @@
         private ns1.BunifuFlatButton btn_reportes;
         private ns1.BunifuFlatButton btn_salir;
         private System.Windows.Forms.Panel panel2;
-        private ns1.BunifuMaterialTextbox txt_fecha;
-        private ns1.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Label label1;
         private ns1.BunifuElipse bunifuElipse1;
         private ns1.BunifuImageButton bunifuImageButton2;
-        private MetroSuite.MetroTextBox metroTextBox1;
-        private MetroSuite.MetroButton metroButton1;
+        private ns1.BunifuDatepicker bunifuDatepicker1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_name;
+        private ns1.BunifuThinButton2 bunifuThinButton21;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
     }
 }
 

@@ -35,6 +35,9 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\Documents\Visual Studio 2015\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="MetroSuite">
       <HintPath>..\..\..\..\Documents\Visual Studio 2015\MetroSuite.dll</HintPath>
     </Reference>
