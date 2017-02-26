@@ -50,7 +50,7 @@ namespace formAgen
             panel4.Visible = true;
             panel3.Visible = false;
             bunifuSeparator1.Visible = true;
-            bunifuSeparator2.Visible = false;
+            bunifuSeparator2.Visible = false;//test
             
         }
 
